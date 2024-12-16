@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: imagename 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imagename
+  template:
+    metadata:
+      labels:
+        app: imagename 
+    spec:
+      containers:
+        - name: imagename 
+          image: firstacreasy.azurecr.io/imagename
+          ports:
+          - containerPort: 80
